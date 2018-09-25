@@ -1,5 +1,5 @@
-console.log('Hello World form JavaScript');
-
+// console.log('Hello World form JavaScript');
+const {newMarker} = require('./marker')
 const mapboxgl = require('mapbox-gl');
 
 mapboxgl.accessToken =
@@ -11,3 +11,16 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: 'mapbox://styles/mapbox/streets-v10', // mapbox has lots of different map styles available.
 });
+
+let markerBase = new mapboxgl.Marker()
+  .setLngLat([-87.641, 41.895])
+  .addTo(map);
+
+const markerOne = newMarker("activity", [-74.009151, 40.705086]);
+markerOne.addTo(map);
+
+const markerTwo = newMarker("hotel", [-73.048, 40.00000]);
+markerTwo.addTo(map);
+
+const markerThree = newMarker("restaurant", [-74.509151, 40.305086]);
+markerThree.addTo(map);

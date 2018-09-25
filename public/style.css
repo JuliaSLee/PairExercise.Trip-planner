@@ -5,13 +5,13 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: black;
-  /* #c1b5ad; */
+  background-color:#c1b5ad;
 }
 
 #map {
-  height: 100vh;
-  width: 80vw;
+    flex: 4;
+  /* height: 100vh; */
+  /* width: 80vw; */
 }
 
 header {
@@ -20,26 +20,44 @@ header {
 }
 
 #selector {
-  width: 20vw;
+    flex: 1;
+  /* width: 20vw; */
 }
 
 main {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #sidebar {
   display: flex;
+  flex-shrink: 0;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgb(252, 169, 197);
 }
 
 #places {
   flex: 1;
   background-color: burlywood;
+  margin: 20px;
 }
 
 #itinerary {
   flex: 1;
-  background-color: yellow;
+  background-color: rgb(90, 190, 160);
+  margin: 20px;
+}
+
+.button{
+    height: 25px;
+    width: 25px;
+    font-size: 20%;
+    border-radius: 50%;
+}
+
+.button:hover{
+    background-color: yellowgreen;
+    color: white;
 }

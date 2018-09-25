@@ -1,5 +1,5 @@
 // console.log('Hello World form JavaScript');
-const {newMarker} = require('./marker')
+const { newMarker } = require('./marker')
 const mapboxgl = require('mapbox-gl');
 
 mapboxgl.accessToken =
